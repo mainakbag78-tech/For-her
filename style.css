@@ -1,0 +1,182 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial,sans-serif;
+}
+
+body{
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    overflow:hidden;
+    background:linear-gradient(135deg,#ff4e8d,#ff914d);
+}
+
+/* Intro Screen */
+
+#intro{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:linear-gradient(135deg,#ff4e8d,#ff914d);
+    color:white;
+    text-align:center;
+    padding:30px;
+    font-size:32px;
+    z-index:999;
+}
+
+/* Proposal Card */
+
+.card{
+    width:340px;
+    padding:30px;
+    background:rgba(255,255,255,.18);
+    backdrop-filter:blur(18px);
+    border-radius:25px;
+    text-align:center;
+    color:white;
+    box-shadow:0 10px 35px rgba(0,0,0,.25);
+    display:none;
+    animation:fadeIn 1s ease;
+    z-index:10;
+}
+
+h1{
+    margin:20px 0;
+    font-size:30px;
+}
+
+.from{
+    margin-top:10px;
+    font-size:18px;
+}
+
+.name{
+    color:#ffe6f2;
+    margin-top:15px;
+}
+
+.message{
+    margin-top:20px;
+    line-height:1.6;
+}
+
+/* Buttons */
+
+.buttons{
+    margin-top:25px;
+}
+
+button{
+    padding:12px 30px;
+    margin:10px;
+    border:none;
+    border-radius:50px;
+    font-size:18px;
+    cursor:pointer;
+    transition:.3s;
+}
+
+#yes{
+    background:white;
+    color:#ff2f75;
+    font-weight:bold;
+}
+
+#yes:hover{
+    transform:scale(1.1);
+}
+
+#no{
+    background:#222;
+    color:white;
+}
+
+/* Floating Hearts */
+
+.heart{
+    position:fixed;
+    pointer-events:none;
+    animation-timing-function:linear;
+    animation-fill-mode:forwards;
+}
+
+/* Animations */
+
+@keyframes floatUp{
+
+0%{
+transform:translateY(0);
+opacity:1;
+}
+
+100%{
+transform:translateY(-120vh);
+opacity:0;
+}
+
+}
+
+@keyframes floatRight{
+
+0%{
+transform:translateX(0);
+opacity:1;
+}
+
+100%{
+transform:translateX(120vw);
+opacity:0;
+}
+
+}
+
+@keyframes floatLeft{
+
+0%{
+transform:translateX(0);
+opacity:1;
+}
+
+100%{
+transform:translateX(-120vw);
+opacity:0;
+}
+
+}
+
+@keyframes floatDiagonal{
+
+0%{
+transform:translate(0,0);
+opacity:1;
+}
+
+100%{
+transform:translate(120vw,-120vh);
+opacity:0;
+}
+
+}
+
+@keyframes fadeIn{
+
+0%{
+opacity:0;
+transform:scale(.8);
+}
+
+100%{
+opacity:1;
+transform:scale(1);
+}
+
+}
